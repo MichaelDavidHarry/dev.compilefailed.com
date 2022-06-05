@@ -2,7 +2,7 @@
     $default_wait_milliseconds = 500;
     $max_wait_milliseconds = 50000;
 
-    $milliseconds_parameter = array_key_exists($'milliseconds', $_GET) ? $_GET['milliseconds'] : $default_wait_milliseconds;
+    $milliseconds_parameter = array_key_exists('milliseconds', $_GET) ? $_GET['milliseconds'] : $default_wait_milliseconds;
     // If the user provided a valid number for milliseconds use it, otherwise use the default wait milliseconds.
     $milliseconds = parse_int_or_null($milliseconds_parameter) ?? $default_wait_milliseconds;
 
