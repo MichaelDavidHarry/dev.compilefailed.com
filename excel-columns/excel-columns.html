@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Column Mapper</title>
+</head>
+<body>
+    <h1>Excel Column Mapper</h1>
+    <div>
+        <h2>Index to Excel Column</h2>
+        <label>
+            Index
+            <input id="index-input" type="number" min="0" max="16383">
+        </label>
+        <label>
+            Excel Column
+            <input id="excel-column-output" type="text" readonly />
+        </label>
+    </div>
+    <div>
+        <h2>Excel Column to Index</h2>
+        <label>
+            Excel Column
+            <input type="text" id="excel-column-input" />
+        </label>
+        <label>
+            Index
+            <input id="index-output" type="number" readonly />
+        </label>
+    </div>
+    <script src="./ExcelColumnIndexMapper.js"></script>
+    <script>
+        document.querySelector('#index-input').addEventListener('input', (event) => {
+            document.querySelector('#excel-column-output').value = ExcelColumnIndexMapper.getExcelColumnNameForIndex(event.target.value);
+        });
+
+        document.querySelector('#excel-column-input').addEventListener('input', (event) => {
+            document.querySelector('#index-output').value = ExcelColumnIndexMapper.getIndexForExcelColumnName(event.target.value.toUpperCase());
+        });
+    </script>
+</body>
+</html>
