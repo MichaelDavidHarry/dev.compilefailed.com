@@ -15,5 +15,9 @@
             <a href="./excel-columns/excel-columns.html">Excel Column Mapper</a> - Tool to convert between zero-based indexes and Excel column names and vice-versa.
             <div>Example: Index 0 maps to column A. Index 26 maps to column AA. Column XFD maps to 16383.</div>
         </p>
+        <p>
+            <a href="./text-transformer/text-transformer.html">Text Transformer</a> - Tool to apply a JavaScript mapping to arbitrary text.
+            <div>Example: <a href="./text-transformer/text-transformer.html?input=This%0Ais%0Asome%0Atext&transform=var+splitInput+%3D+input.split%28%27%5Cn%27%29%3B%0Avar+output+%3D+%27%27%3B%0AsplitInput.forEach%28%28line%29+%3D%3E+%7B%0A++++output+%2B%3D+line.split%28%27%27%29.reverse%28%29.join%28%27%27%29+%2B+%27%5Cn%27%3B%0A%7D%29%3B%0Areturn+output%3B%0A++++++++++++++++">Reverse each line of input.</a></div>
+        </p>
     </body>
 </html>
