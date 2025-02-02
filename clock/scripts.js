@@ -1,6 +1,7 @@
 (function(){
     var overrideTime = null;
 
+    // Provide a given time to display by appending a hash to the URL, like this: #time=2-2-2025 12:11 pm
     if (window.location.hash.startsWith("#time")){
         overrideTime = new Date(decodeURIComponent(window.location.hash.split('=')[1]));
     }
